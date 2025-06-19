@@ -8,7 +8,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RT6907CRNG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-RT6907CRNG');
   </script>
@@ -21,9 +21,19 @@
           width="100%" height="600"
           style="border:none;max-width:900px;"></iframe>
 
+  <!-- 購入ボタン with GAイベント -->
   <p>
     <a href="https://rarible.com/token/0xdbf24b7b9182f183fe6e6bf1325be2ae41f1393e:21269214860897579696216278236539693614134200511802301932789803256963106078766"
-       target="_blank">🌹 今すぐ購入</a>
+       target="_blank"
+       onclick="gtag('event', 'click', {
+         event_category: '購入ボタン',
+         event_label: 'RoseCoin購入（VIPページ）',
+         value: 1
+       });"
+       style="display:inline-block;padding:0.8rem 1.5rem;background:#e74c3c;
+              color:#fff;text-decoration:none;border-radius:30px;transition:0.3s;">
+      🌹 今すぐ購入
+    </a>
   </p>
 </body>
 </html>
